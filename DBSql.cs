@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 /// </summary>
 public class DBSql
 {
-    private string strConnection = "";
+    private string strConnection = "connection string needed";
     private SqlConnection myConnection;
     private bool bConnected;
     private string strError = "";
