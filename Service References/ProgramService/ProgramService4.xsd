@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schema.unitedtote.com/ToteLink/ToteDataTypes/2008/04" elementFormDefault="qualified" targetNamespace="http://schema.unitedtote.com/ToteLink/ToteDataTypes/2008/04" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CompressedList">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]+(-[0-9]+)?(,[0-9]+(-[0-9]+)?)*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompressedList" nillable="true" type="tns:CompressedList" />
+</xs:schema>

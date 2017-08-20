@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="da9fd968-770e-4d38-8521-a9d011e0ac24" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProgramService.wsdl" MetadataType="Wsdl" ID="b69b1e99-4b4b-4d49-bb4c-721fde997265" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?wsdl=wsdl0" />
+    <MetadataFile FileName="ProgramService.xsd" MetadataType="Schema" ID="fdf6452a-1b8b-41d3-a9a5-7db5b5dcd56a" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd6" />
+    <MetadataFile FileName="ProgramService1.xsd" MetadataType="Schema" ID="6b2a6d65-51d8-49bf-86a3-88a6a0edc537" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd2" />
+    <MetadataFile FileName="ProgramService2.xsd" MetadataType="Schema" ID="0994a3dd-d189-444a-ae1e-d19e0d2447fd" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd5" />
+    <MetadataFile FileName="ProgramService1.wsdl" MetadataType="Wsdl" ID="93159571-2459-450b-81b1-7f6315527a77" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?wsdl" />
+    <MetadataFile FileName="ProgramService3.xsd" MetadataType="Schema" ID="bcaf5fce-03aa-4a75-98da-19206f503975" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd0" />
+    <MetadataFile FileName="ProgramService4.xsd" MetadataType="Schema" ID="64690b77-e215-4a18-8fc5-ff555cd5826a" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd3" />
+    <MetadataFile FileName="ProgramService5.xsd" MetadataType="Schema" ID="2cb5d22c-2d63-4695-9c48-f1783fd16891" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd1" />
+    <MetadataFile FileName="ProgramService6.xsd" MetadataType="Schema" ID="333af78e-3481-4040-9177-82335e68bd7d" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

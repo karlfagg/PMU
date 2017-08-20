@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d7e709eb-ad49-42a2-947f-0582692a5542" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WageringService.xsd" MetadataType="Schema" ID="f6c01f88-f7fb-4533-a6ad-9f1a271c0727" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd5" />
+    <MetadataFile FileName="WageringService.wsdl" MetadataType="Wsdl" ID="02cee647-da2e-4a8f-a26d-71faa5178afa" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?wsdl=wsdl0" />
+    <MetadataFile FileName="WageringService1.wsdl" MetadataType="Wsdl" ID="9d4a8a05-d798-4086-9dd4-5331ff791831" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?wsdl" />
+    <MetadataFile FileName="WageringService1.xsd" MetadataType="Schema" ID="606e9627-d4a8-477b-b9ff-5a875f001121" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd7" />
+    <MetadataFile FileName="WageringService2.xsd" MetadataType="Schema" ID="8acdb563-17e5-4da6-aa84-2c347ff2a4fe" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd2" />
+    <MetadataFile FileName="WageringService3.xsd" MetadataType="Schema" ID="5cea09db-1985-4ab1-9c69-7bcf5c3f34f0" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd0" />
+    <MetadataFile FileName="WageringService4.xsd" MetadataType="Schema" ID="2a250ccf-94db-434b-9128-e463d356bc30" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd6" />
+    <MetadataFile FileName="WageringService5.xsd" MetadataType="Schema" ID="5dc216a0-5d6c-4790-879d-85f5aef5bac4" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd4" />
+    <MetadataFile FileName="WageringService6.xsd" MetadataType="Schema" ID="c7e048e9-8aab-4a01-b6bb-7ec5091f79cd" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd3" />
+    <MetadataFile FileName="WageringService7.xsd" MetadataType="Schema" ID="9d6876e0-400a-4f49-a0ca-fa5bae69e972" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

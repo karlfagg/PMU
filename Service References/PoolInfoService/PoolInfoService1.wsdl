@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:i0="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="PoolInfoService" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/Imports">
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd1" namespace="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd3" namespace="http://schema.unitedtote.com/ToteLink/Faults/2008/10" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd4" namespace="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="PoolInfo_Keepalive_InputMessage">
+    <wsdl:part xmlns:q1="http://schema.unitedtote.com/ToteLink/2008/06/Common" name="parameters" element="q1:Keepalive" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_Keepalive_OutputMessage">
+    <wsdl:part xmlns:q2="http://schema.unitedtote.com/ToteLink/2008/06/Common" name="parameters" element="q2:KeepaliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetMatrix_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatrix" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetMatrix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMatrixResponse" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetMatrix_ToteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schema.unitedtote.com/ToteLink/Faults/2008/10" name="detail" element="q3:ToteLinkFault" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetMatrix_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q4:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetPoolTotals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPoolTotals" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetPoolTotals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPoolTotalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetPoolTotals_ToteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schema.unitedtote.com/ToteLink/Faults/2008/10" name="detail" element="q5:ToteLinkFault" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetPoolTotals_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q6:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetWillpays_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWillpays" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetWillpays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWillpaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetWillpays_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q7:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="PoolInfo_GetWillpays_ToteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schema.unitedtote.com/ToteLink/Faults/2008/10" name="detail" element="q8:ToteLinkFault" />
+  </wsdl:message>
+  <wsdl:portType name="PoolInfo">
+    <wsdl:operation name="Keepalive">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Common/Keepalive/Keepalive" message="tns:PoolInfo_Keepalive_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Common/Keepalive/KeepaliveResponse" message="tns:PoolInfo_Keepalive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatrix">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetMatrix" message="tns:PoolInfo_GetMatrix_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetMatrixResponse" message="tns:PoolInfo_GetMatrix_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetMatrixToteFaultFault" name="ToteFaultFault" message="tns:PoolInfo_GetMatrix_ToteFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetMatrixValidationFaultFault" name="ValidationFaultFault" message="tns:PoolInfo_GetMatrix_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPoolTotals">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetPoolTotals" message="tns:PoolInfo_GetPoolTotals_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetPoolTotalsResponse" message="tns:PoolInfo_GetPoolTotals_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetPoolTotalsToteFaultFault" name="ToteFaultFault" message="tns:PoolInfo_GetPoolTotals_ToteFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetPoolTotalsValidationFaultFault" name="ValidationFaultFault" message="tns:PoolInfo_GetPoolTotals_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWillpays">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetWillpays" message="tns:PoolInfo_GetWillpays_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetWillpaysResponse" message="tns:PoolInfo_GetWillpays_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetWillpaysValidationFaultFault" name="ValidationFaultFault" message="tns:PoolInfo_GetWillpays_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo/PoolInfo/GetWillpaysToteFaultFault" name="ToteFaultFault" message="tns:PoolInfo_GetWillpays_ToteFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="PoolInfoService">
+    <wsdl:port name="PoolInfo-BASIC" binding="i0:PoolInfo-BASIC">
+      <soap:address location="http://usdcnyctl01.utote.com:8088/ToteLink/PoolInfoService/BASIC" />
+    </wsdl:port>
+    <wsdl:port name="PoolInfo-BASIC-S" binding="i0:PoolInfo-BASIC-S">
+      <soap:address location="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService/BASIC" />
+    </wsdl:port>
+    <wsdl:port name="PoolInfo-TCP" binding="i0:PoolInfo-TCP">
+      <soap12:address location="net.tcp://usdcnyctl01.utote.com:8089/ToteLink/PoolInfoService/TCP" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://usdcnyctl01.utote.com:8089/ToteLink/PoolInfoService/TCP</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="PoolInfo-WS" binding="i0:PoolInfo-WS">
+      <soap12:address location="http://usdcnyctl01.utote.com:8088/ToteLink/PoolInfoService/WS" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://usdcnyctl01.utote.com:8088/ToteLink/PoolInfoService/WS</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="PoolInfo-WS-S" binding="i0:PoolInfo-WS-S">
+      <soap12:address location="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService/WS" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService/WS</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

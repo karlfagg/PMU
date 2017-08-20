@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:i0="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/Program" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="ProgramService" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Program" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Program/Imports">
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd1" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Program" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd4" namespace="http://schema.unitedtote.com/ToteLink/Faults/2008/10" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd5" namespace="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd3" namespace="http://schema.unitedtote.com/ToteLink/ToteDataTypes/2008/04" />
+      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Program_Keepalive_InputMessage">
+    <wsdl:part xmlns:q1="http://schema.unitedtote.com/ToteLink/2008/06/Common" name="parameters" element="q1:Keepalive" />
+  </wsdl:message>
+  <wsdl:message name="Program_Keepalive_OutputMessage">
+    <wsdl:part xmlns:q2="http://schema.unitedtote.com/ToteLink/2008/06/Common" name="parameters" element="q2:KeepaliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvents" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetEvents_ToteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schema.unitedtote.com/ToteLink/Faults/2008/10" name="detail" element="q3:ToteLinkFault" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetEvents_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q4:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetEventDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventDetail" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetEventDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetEventDetail_ToteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schema.unitedtote.com/ToteLink/Faults/2008/10" name="detail" element="q5:ToteLinkFault" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetEventDetail_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q6:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetRace_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRace" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetRace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetRace_ToteFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schema.unitedtote.com/ToteLink/Faults/2008/10" name="detail" element="q7:ToteLinkFault" />
+  </wsdl:message>
+  <wsdl:message name="Program_GetRace_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q8:ValidationFault" />
+  </wsdl:message>
+  <wsdl:portType name="Program">
+    <wsdl:operation name="Keepalive">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Common/Keepalive/Keepalive" message="tns:Program_Keepalive_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Common/Keepalive/KeepaliveResponse" message="tns:Program_Keepalive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetEvents" message="tns:Program_GetEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetEventsResponse" message="tns:Program_GetEvents_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetEventsToteFaultFault" name="ToteFaultFault" message="tns:Program_GetEvents_ToteFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetEventsValidationFaultFault" name="ValidationFaultFault" message="tns:Program_GetEvents_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventDetail">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetEventDetail" message="tns:Program_GetEventDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetEventDetailResponse" message="tns:Program_GetEventDetail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetEventDetailToteFaultFault" name="ToteFaultFault" message="tns:Program_GetEventDetail_ToteFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetEventDetailValidationFaultFault" name="ValidationFaultFault" message="tns:Program_GetEventDetail_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRace">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetRace" message="tns:Program_GetRace_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetRaceResponse" message="tns:Program_GetRace_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetRaceToteFaultFault" name="ToteFaultFault" message="tns:Program_GetRace_ToteFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Program/Program/GetRaceValidationFaultFault" name="ValidationFaultFault" message="tns:Program_GetRace_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="ProgramService">
+    <wsdl:port name="Program-BASIC" binding="i0:Program-BASIC">
+      <soap:address location="http://usdcnyctl01.utote.com:8088/ToteLink/ProgramService/BASIC" />
+    </wsdl:port>
+    <wsdl:port name="Program-BASIC-S" binding="i0:Program-BASIC-S">
+      <soap:address location="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService/BASIC" />
+    </wsdl:port>
+    <wsdl:port name="Program-TCP" binding="i0:Program-TCP">
+      <soap12:address location="net.tcp://usdcnyctl01.utote.com:8089/ToteLink/ProgramService/TCP" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://usdcnyctl01.utote.com:8089/ToteLink/ProgramService/TCP</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="Program-WS" binding="i0:Program-WS">
+      <soap12:address location="http://usdcnyctl01.utote.com:8088/ToteLink/ProgramService/WS" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://usdcnyctl01.utote.com:8088/ToteLink/ProgramService/WS</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="Program-WS-S" binding="i0:Program-WS-S">
+      <soap12:address location="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService/WS" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService/WS</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

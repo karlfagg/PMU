@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo" elementFormDefault="qualified" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
+  <xs:element name="GetMatrix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MatrixRequest" nillable="true" type="tns:MatrixRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MatrixRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q1:ToteLinkRequest">
+        <xs:sequence>
+          <xs:element name="EventId" nillable="true" type="xs:string" />
+          <xs:element name="RaceId" type="xs:int" />
+          <xs:element name="PoolId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MatrixFormat" nillable="true" type="tns:MatrixFormat">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MatrixRequest" nillable="true" type="tns:MatrixRequest" />
+  <xs:simpleType name="MatrixFormat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Odds" />
+      <xs:enumeration value="Prices" />
+      <xs:enumeration value="Morning" />
+      <xs:enumeration value="Pool" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MatrixFormat" nillable="true" type="tns:MatrixFormat" />
+  <xs:element name="GetMatrixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MatrixResponse" nillable="true" type="tns:MatrixResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MatrixResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q2:ToteLinkResponse">
+        <xs:sequence>
+          <xs:element name="EventId" nillable="true" type="xs:string" />
+          <xs:element name="RaceId" type="xs:int" />
+          <xs:element name="PoolId" nillable="true" type="xs:string" />
+          <xs:element name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element name="Timestamp" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PoolName" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="MorningLine" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Final" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Symmetric" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="PriceBaseWager" nillable="true" type="xs:decimal">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="NumberOfRows" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="NumberOfColumns" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Rows" nillable="true" type="tns:Rows">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MatrixResponse" nillable="true" type="tns:MatrixResponse" />
+  <xs:complexType name="Rows">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Row" nillable="true" type="tns:Row" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rows" nillable="true" type="tns:Rows" />
+  <xs:complexType name="Row">
+    <xs:sequence>
+      <xs:element name="RowNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Columns" nillable="true" type="tns:Columns">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Row" nillable="true" type="tns:Row" />
+  <xs:complexType name="Columns">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Column" nillable="true" type="tns:Column" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Columns" nillable="true" type="tns:Columns" />
+  <xs:complexType name="Column">
+    <xs:sequence>
+      <xs:element name="ColumnNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Invalid" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Scratched" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Direction" type="tns:ChangeDirection">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Formatted" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Column" nillable="true" type="tns:Column" />
+  <xs:simpleType name="ChangeDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoChange" />
+      <xs:enumeration value="Up" />
+      <xs:enumeration value="Down" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ChangeDirection" nillable="true" type="tns:ChangeDirection" />
+  <xs:element name="GetPoolTotals">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TotalsRequest" nillable="true" type="tns:TotalsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TotalsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q3:ToteLinkRequest">
+        <xs:sequence>
+          <xs:element name="EventId" nillable="true" type="xs:string" />
+          <xs:element name="RaceId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TotalsRequest" nillable="true" type="tns:TotalsRequest" />
+  <xs:element name="GetPoolTotalsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TotalsResponse" nillable="true" type="tns:TotalsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TotalsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q4:ToteLinkResponse">
+        <xs:sequence>
+          <xs:element name="EventId" nillable="true" type="xs:string" />
+          <xs:element name="RaceId" type="xs:int" />
+          <xs:element name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element name="Timestamp" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PoolTotals" nillable="true" type="tns:PoolTotals">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TotalsResponse" nillable="true" type="tns:TotalsResponse" />
+  <xs:complexType name="PoolTotals">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PoolTotal" nillable="true" type="tns:PoolTotal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PoolTotals" nillable="true" type="tns:PoolTotals" />
+  <xs:complexType name="PoolTotal">
+    <xs:sequence>
+      <xs:element name="PoolId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoolName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Final" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Handle" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Net" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PoolTotal" nillable="true" type="tns:PoolTotal" />
+  <xs:element name="GetWillpays">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WillpaysRequest" nillable="true" type="tns:WillpaysRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="WillpaysRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q5:ToteLinkRequest">
+        <xs:sequence>
+          <xs:element name="EventId" nillable="true" type="xs:string" />
+          <xs:element name="RaceId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WillpaysRequest" nillable="true" type="tns:WillpaysRequest" />
+  <xs:element name="GetWillpaysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WillpaysResponse" nillable="true" type="tns:WillpaysResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="WillpaysResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q6:ToteLinkResponse">
+        <xs:sequence>
+          <xs:element name="EventId" nillable="true" type="xs:string" />
+          <xs:element name="RaceId" type="xs:int" />
+          <xs:element name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WillpayName" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Pools" nillable="true" type="tns:Pools">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WillpaysResponse" nillable="true" type="tns:WillpaysResponse" />
+  <xs:complexType name="Pools">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PoolWillpays" nillable="true" type="tns:PoolWillpays" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pools" nillable="true" type="tns:Pools" />
+  <xs:complexType name="PoolWillpays">
+    <xs:sequence>
+      <xs:element name="PoolId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoolName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Live" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="RaceId" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Wager" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Willpays" nillable="true" type="tns:Willpays">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PoolWillpays" nillable="true" type="tns:PoolWillpays" />
+  <xs:complexType name="Willpays">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Willpay" nillable="true" type="tns:Willpay" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Willpays" nillable="true" type="tns:Willpays" />
+  <xs:complexType name="Willpay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Pays" nillable="true" type="tns:Pays">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Finish" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Willpay" nillable="true" type="tns:Willpay" />
+  <xs:complexType name="Pays">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pay" nillable="true" type="tns:Pay" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pays" nillable="true" type="tns:Pays" />
+  <xs:complexType name="Pay">
+    <xs:sequence>
+      <xs:element name="RunnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Required" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Scratched" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="NoMoney" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Formatted" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pay" nillable="true" type="tns:Pay" />
+</xs:schema>

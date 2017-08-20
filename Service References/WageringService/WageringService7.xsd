@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/Wager" elementFormDefault="qualified" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Wager" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd3" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common/Wager" />
+  <xs:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
+  <xs:element name="IssueTicket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TicketRequest" nillable="true" type="tns:TicketRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TicketRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q1:ToteLinkRequest">
+        <xs:sequence>
+          <xs:element name="EventId" nillable="true" type="xs:string" />
+          <xs:element name="RaceId" type="xs:int" />
+          <xs:element name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Pin" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="PatronId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Parlay" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Partial" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element xmlns:q2="http://schema.unitedtote.com/ToteLink/2008/06/Common/Wager" name="Wagers" nillable="true" type="q2:Wagers" />
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="NewSession" type="xs:boolean">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TicketRequest" nillable="true" type="tns:TicketRequest" />
+  <xs:element name="IssueTicketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TicketResponse" nillable="true" type="tns:TicketResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TicketResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q3:ToteLinkResponse">
+        <xs:sequence>
+          <xs:element name="TicketId" nillable="true" type="xs:string" />
+          <xs:element name="EventId" nillable="true" type="xs:string" />
+          <xs:element name="RaceId" type="xs:int" />
+          <xs:element name="Total" nillable="true" type="xs:decimal" />
+          <xs:element name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schema.unitedtote.com/ToteLink/2008/06/Common/Wager" name="Wagers" nillable="true" type="q4:Wagers" />
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Balance" nillable="true" type="xs:decimal">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="AccountId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Coupons" nillable="true" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Surcharge" nillable="true" type="xs:decimal">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Expiration" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TicketResponse" nillable="true" type="tns:TicketResponse" />
+  <xs:element name="ValidateTicket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TicketRequest" nillable="true" type="tns:TicketRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateTicketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TicketRequest" nillable="true" type="tns:TicketRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelTicket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelRequest" nillable="true" type="tns:CancelRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CancelRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q5:ToteLinkRequest">
+        <xs:sequence>
+          <xs:element name="TicketId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Pin" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CancelRequest" nillable="true" type="tns:CancelRequest" />
+  <xs:element name="CancelTicketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelResponse" nillable="true" type="tns:CancelResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CancelResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q6:ToteLinkResponse">
+        <xs:sequence>
+          <xs:element name="Total" type="xs:decimal" />
+          <xs:element minOccurs="0" name="AccountId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element name="TicketId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Balance" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CancelResponse" nillable="true" type="tns:CancelResponse" />
+  <xs:element name="InquireTicket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InquireRequest" nillable="true" type="tns:InquireRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="InquireRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q7:ToteLinkRequest">
+        <xs:sequence>
+          <xs:element name="TicketId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InquireRequest" nillable="true" type="tns:InquireRequest" />
+  <xs:element name="InquireTicketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InquireResponse" nillable="true" type="tns:InquireResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="InquireResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q8:ToteLinkResponse">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schema.unitedtote.com/ToteLink/2008/06/Common/Wager" name="Ticket" nillable="true" type="q9:Ticket" />
+          <xs:element minOccurs="0" name="AccountId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InquireResponse" nillable="true" type="tns:InquireResponse" />
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a7741ec1-3351-403f-8abf-70516dee8a84" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PoolInfoService.xsd" MetadataType="Schema" ID="872fb0c3-cd8a-481c-816b-52dcec89c8d7" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd4" />
+    <MetadataFile FileName="PoolInfoService1.xsd" MetadataType="Schema" ID="f48a3540-4a99-4890-a091-205bc75a2a86" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd1" />
+    <MetadataFile FileName="PoolInfoService.wsdl" MetadataType="Wsdl" ID="ada64569-428c-4dbb-9fd6-469cf1dd2120" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?wsdl=wsdl0" />
+    <MetadataFile FileName="PoolInfoService2.xsd" MetadataType="Schema" ID="96decff0-841d-427e-8380-991106ce45a4" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd2" />
+    <MetadataFile FileName="PoolInfoService3.xsd" MetadataType="Schema" ID="8df1033c-b65a-460b-8594-788e86e6bdc4" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd0" />
+    <MetadataFile FileName="PoolInfoService4.xsd" MetadataType="Schema" ID="72d7cec9-5e00-495a-91ed-e5c4c8fb62db" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd5" />
+    <MetadataFile FileName="PoolInfoService1.wsdl" MetadataType="Wsdl" ID="42c91a13-ed58-41d1-9c25-ee1cc0f1b37b" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?wsdl" />
+    <MetadataFile FileName="PoolInfoService5.xsd" MetadataType="Schema" ID="cf50d8a5-b009-4d78-9233-522aead6d364" SourceId="1" SourceUrl="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
