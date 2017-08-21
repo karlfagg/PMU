@@ -9,9 +9,9 @@ namespace USRaceList
     class Program
     {
         static DBSql dbSql = new DBSql();
-        static USRaceList.ProgramService.ProgramClient prgClient = new USRaceList.ProgramService.ProgramClient("Program-BASIC-S");
-        static USRaceList.WageringService.WageringClient wageringClient = new USRaceList.WageringService.WageringClient("Wagering-BASIC-S");
-        static USRaceList.PoolInfoService.PoolInfoClient poolClient = new USRaceList.PoolInfoService.PoolInfoClient("PoolInfo-BASIC-S");
+        static ProgramService.ProgramClient prgClient = new ProgramService.ProgramClient("Program-BASIC-S");
+        static WageringService.WageringClient wageringClient = new WageringService.WageringClient("Wagering-BASIC-S");
+        static PoolInfoService.PoolInfoClient poolClient = new PoolInfoService.PoolInfoClient("PoolInfo-BASIC-S");
         static void Main(string[] args)
         {
             
@@ -19,20 +19,20 @@ namespace USRaceList
             Console.WriteLine("US Race List program started on " + DateTime.Now.ToLongDateString());
             Console.WriteLine();
 
-            //GetEventList();
-           //TestPoolInfoService();
+            GetEventList();
+            TestPoolInfoService();
             TestWageringService();
 
-            //Console.WriteLine();
-            //Console.WriteLine("Press any key  to continue.................");
-            //Console.ReadKey();
+            Console.WriteLine();
+            Console.WriteLine("Press any key  to quit test.................");
+            Console.ReadKey();
         }
 
         private static void TestPoolInfoService()
         {
 
-            USRaceList.PoolInfoService.MatrixRequest req = new PoolInfoService.MatrixRequest();
-            USRaceList.PoolInfoService.MatrixResponse res = new PoolInfoService.MatrixResponse();
+            PoolInfoService.MatrixRequest req = new PoolInfoService.MatrixRequest();
+            PoolInfoService.MatrixResponse res = new PoolInfoService.MatrixResponse();
 
             wageringClient.ClientCredentials.UseIdentityConfiguration = true;
             poolClient.ClientCredentials.UserName.UserName = "smg-tl";
@@ -44,7 +44,7 @@ namespace USRaceList
             req.EventId = "IVM";
             req.PoolId = "WIN";
             req.RaceId = 1;
-            req.MatrixFormat = USRaceList.PoolInfoService.MatrixFormat.Odds;
+            req.MatrixFormat = PoolInfoService.MatrixFormat.Odds;
             res = poolClient.GetMatrix(req);
 
         }
@@ -52,8 +52,8 @@ namespace USRaceList
 
         private static void TestWageringService()
         {
-            USRaceList.WageringService.TicketRequest req = new USRaceList.WageringService.TicketRequest();
-            USRaceList.WageringService.TicketResponse res = new USRaceList.WageringService.TicketResponse();
+            WageringService.TicketRequest req = new WageringService.TicketRequest();
+            WageringService.TicketResponse res = new WageringService.TicketResponse();
 
             wageringClient.ClientCredentials.UserName.UserName = "smg-tl";
             wageringClient.ClientCredentials.UserName.Password = "SMGsmg2012";
@@ -69,12 +69,12 @@ namespace USRaceList
             req.ReferenceId = "test";
             
 
-            USRaceList.WageringService.Wagers wagers = new USRaceList.WageringService.Wagers();
-            USRaceList.WageringService.Wager wager = new USRaceList.WageringService.Wager();
+            WageringService.Wagers wagers = new WageringService.Wagers();
+            WageringService.Wager wager = new WageringService.Wager();
             wager.PoolId = "WIN";
 
-            USRaceList.WageringService.Legs legs = new USRaceList.WageringService.Legs();
-            USRaceList.WageringService.Leg leg = new USRaceList.WageringService.Leg();
+            WageringService.Legs legs = new WageringService.Legs();
+            WageringService.Leg leg = new WageringService.Leg();
             leg.Runners = "2";
             legs.Add(leg);
 
@@ -91,8 +91,8 @@ namespace USRaceList
         {
             try
             {
-                USRaceList.ProgramService.EventsRequest req = new USRaceList.ProgramService.EventsRequest();
-                USRaceList.ProgramService.EventsResponse res = new USRaceList.ProgramService.EventsResponse();
+                ProgramService.EventsRequest req = new ProgramService.EventsRequest();
+                ProgramService.EventsResponse res = new ProgramService.EventsResponse();
                 req.Source = GetProgramServiceSource();
 
                 prgClient.ClientCredentials.UserName.UserName = "smg-tl";
@@ -104,7 +104,7 @@ namespace USRaceList
 
                 for (int i = 0; i < res.Events.Count(); i++)
                 {
-                    //Console.WriteLine(res.Events[i].EventName + " " + res.Events[i].TrackType.ToString());
+                    Console.WriteLine(res.Events[i].EventName + " " + res.Events[i].TrackType.ToString());
                     if (res.Events[i].TrackType.ToString() == "Thoroughbred")
                     {
                         string parlay = "";
