@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="70b83af4-cc98-4d5f-bdf8-bd71e4d6d965" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?wsdl " Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TransactionService.wsdl" MetadataType="Wsdl" ID="47fa5104-5b7d-444c-b1df-0d995fcf4ca4" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?wsdl=wsdl0" />
+    <MetadataFile FileName="TransactionService.xsd" MetadataType="Schema" ID="211fcf9e-c130-494e-9e70-42550d1caee6" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd6" />
+    <MetadataFile FileName="TransactionService1.xsd" MetadataType="Schema" ID="0b99a6bf-173e-4239-b807-1cc1aa9464a2" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd5" />
+    <MetadataFile FileName="TransactionService2.xsd" MetadataType="Schema" ID="8a1545da-7df8-4cfe-b223-242210f254d7" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd7" />
+    <MetadataFile FileName="TransactionService3.xsd" MetadataType="Schema" ID="7c873fc4-5763-44ed-b9c4-6a510da06165" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd1" />
+    <MetadataFile FileName="TransactionService4.xsd" MetadataType="Schema" ID="10fc0b76-960f-4744-a539-b6fb4c9cbcd8" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd2" />
+    <MetadataFile FileName="TransactionService5.xsd" MetadataType="Schema" ID="6c46a7c6-e9d4-46e8-904a-048ab3b50a7a" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd8" />
+    <MetadataFile FileName="TransactionService1.wsdl" MetadataType="Wsdl" ID="576cd859-042d-478e-b5e9-aabc72aa7460" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?wsdl" />
+    <MetadataFile FileName="TransactionService6.xsd" MetadataType="Schema" ID="a0a9fc61-5759-4f94-8b0b-9947045c9954" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd3" />
+    <MetadataFile FileName="TransactionService7.xsd" MetadataType="Schema" ID="416d8a3a-877c-45e5-936e-22256f872b52" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd4" />
+    <MetadataFile FileName="TransactionService8.xsd" MetadataType="Schema" ID="d1565549-c87c-43d9-b436-0d25e5453c16" SourceId="1" SourceUrl="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

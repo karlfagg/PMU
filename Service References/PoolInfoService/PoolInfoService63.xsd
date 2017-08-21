@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo" elementFormDefault="qualified" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/PoolInfo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
+  <xs:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/PoolInfoService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
   <xs:element name="GetMatrix">
     <xs:complexType>
       <xs:sequence>
@@ -47,11 +47,41 @@
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q2="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q2:ToteLinkResponse">
         <xs:sequence>
-          <xs:element name="EventId" nillable="true" type="xs:string" />
-          <xs:element name="RaceId" type="xs:int" />
-          <xs:element name="PoolId" nillable="true" type="xs:string" />
-          <xs:element name="CurrencyId" nillable="true" type="xs:string" />
-          <xs:element name="Timestamp" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EventId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="RaceId" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="PoolId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Timestamp" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
           <xs:element minOccurs="0" name="PoolName" nillable="true" type="xs:string">
             <xs:annotation>
               <xs:appinfo>
@@ -94,6 +124,13 @@
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
+          <xs:element minOccurs="0" name="NumberOfRunners" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
           <xs:element minOccurs="0" name="NumberOfRows" type="xs:int">
             <xs:annotation>
               <xs:appinfo>
@@ -102,6 +139,13 @@
             </xs:annotation>
           </xs:element>
           <xs:element minOccurs="0" name="NumberOfColumns" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Runners" nillable="true" type="tns:Runners">
             <xs:annotation>
               <xs:appinfo>
                 <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
@@ -120,6 +164,26 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="MatrixResponse" nillable="true" type="tns:MatrixResponse" />
+  <xs:complexType name="Runners">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Runner" nillable="true" type="tns:Runner" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Runners" nillable="true" type="tns:Runners" />
+  <xs:complexType name="Runner">
+    <xs:sequence>
+      <xs:element name="RunnerNumber" type="xs:int" />
+      <xs:element name="NumberOfRows" type="xs:int" />
+      <xs:element minOccurs="0" name="Rows" nillable="true" type="tns:Rows">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Runner" nillable="true" type="tns:Runner" />
   <xs:complexType name="Rows">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Row" nillable="true" type="tns:Row" />
@@ -130,6 +194,13 @@
     <xs:sequence>
       <xs:element name="RowNumber" type="xs:int" />
       <xs:element minOccurs="0" name="Columns" nillable="true" type="tns:Columns">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="NumberOfColumns" type="xs:int">
         <xs:annotation>
           <xs:appinfo>
             <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
@@ -230,10 +301,34 @@
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q4="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q4:ToteLinkResponse">
         <xs:sequence>
-          <xs:element name="EventId" nillable="true" type="xs:string" />
-          <xs:element name="RaceId" type="xs:int" />
-          <xs:element name="CurrencyId" nillable="true" type="xs:string" />
-          <xs:element name="Timestamp" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EventId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="RaceId" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Timestamp" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
           <xs:element minOccurs="0" name="PoolTotals" nillable="true" type="tns:PoolTotals">
             <xs:annotation>
               <xs:appinfo>
@@ -322,9 +417,27 @@
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q6="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q6:ToteLinkResponse">
         <xs:sequence>
-          <xs:element name="EventId" nillable="true" type="xs:string" />
-          <xs:element name="RaceId" type="xs:int" />
-          <xs:element name="CurrencyId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EventId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="RaceId" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
           <xs:element minOccurs="0" name="WillpayName" nillable="true" type="xs:string">
             <xs:annotation>
               <xs:appinfo>

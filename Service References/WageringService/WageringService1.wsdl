@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:i0="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/Wager" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="WageringService" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Wager" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsdl:import namespace="http://tempuri.org/" location="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?wsdl=wsdl0" />
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/Wager" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WageringService" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Wager" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService?wsdl=wsdl0" />
   <wsdl:types>
     <xsd:schema targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Imports">
-      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
-      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd1" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Wager" />
-      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd5" namespace="http://schema.unitedtote.com/ToteLink/Faults/2008/10" />
-      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd6" namespace="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" />
-      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd3" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common/Wager" />
-      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd4" namespace="http://schema.unitedtote.com/ToteLink/ToteDataTypes/2008/04" />
-      <xsd:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService?xsd=xsd1" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Wager" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService?xsd=xsd6" namespace="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService?xsd=xsd3" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common/Wager" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService?xsd=xsd4" namespace="http://schema.unitedtote.com/ToteLink/ToteDataTypes/2008/04" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="Wagering_Keepalive_InputMessage">
@@ -25,11 +25,8 @@
   <wsdl:message name="Wagering_IssueTicket_OutputMessage">
     <wsdl:part name="parameters" element="tns:IssueTicketResponse" />
   </wsdl:message>
-  <wsdl:message name="Wagering_IssueTicket_ToteFaultFault_FaultMessage">
-    <wsdl:part xmlns:q3="http://schema.unitedtote.com/ToteLink/Faults/2008/10" name="detail" element="q3:ToteLinkFault" />
-  </wsdl:message>
   <wsdl:message name="Wagering_IssueTicket_ValidationFaultFault_FaultMessage">
-    <wsdl:part xmlns:q4="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q4:ValidationFault" />
+    <wsdl:part xmlns:q3="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q3:ValidationFault" />
   </wsdl:message>
   <wsdl:message name="Wagering_ValidateTicket_InputMessage">
     <wsdl:part name="parameters" element="tns:ValidateTicket" />
@@ -37,11 +34,8 @@
   <wsdl:message name="Wagering_ValidateTicket_OutputMessage">
     <wsdl:part name="parameters" element="tns:ValidateTicketResponse" />
   </wsdl:message>
-  <wsdl:message name="Wagering_ValidateTicket_ToteFaultFault_FaultMessage">
-    <wsdl:part xmlns:q5="http://schema.unitedtote.com/ToteLink/Faults/2008/10" name="detail" element="q5:ToteLinkFault" />
-  </wsdl:message>
   <wsdl:message name="Wagering_ValidateTicket_ValidationFaultFault_FaultMessage">
-    <wsdl:part xmlns:q6="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q6:ValidationFault" />
+    <wsdl:part xmlns:q4="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q4:ValidationFault" />
   </wsdl:message>
   <wsdl:message name="Wagering_CancelTicket_InputMessage">
     <wsdl:part name="parameters" element="tns:CancelTicket" />
@@ -50,10 +44,7 @@
     <wsdl:part name="parameters" element="tns:CancelTicketResponse" />
   </wsdl:message>
   <wsdl:message name="Wagering_CancelTicket_ValidationFaultFault_FaultMessage">
-    <wsdl:part xmlns:q7="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q7:ValidationFault" />
-  </wsdl:message>
-  <wsdl:message name="Wagering_CancelTicket_ToteFaultFault_FaultMessage">
-    <wsdl:part xmlns:q8="http://schema.unitedtote.com/ToteLink/Faults/2008/10" name="detail" element="q8:ToteLinkFault" />
+    <wsdl:part xmlns:q5="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q5:ValidationFault" />
   </wsdl:message>
   <wsdl:message name="Wagering_InquireTicket_InputMessage">
     <wsdl:part name="parameters" element="tns:InquireTicket" />
@@ -62,10 +53,7 @@
     <wsdl:part name="parameters" element="tns:InquireTicketResponse" />
   </wsdl:message>
   <wsdl:message name="Wagering_InquireTicket_ValidationFaultFault_FaultMessage">
-    <wsdl:part xmlns:q9="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q9:ValidationFault" />
-  </wsdl:message>
-  <wsdl:message name="Wagering_InquireTicket_ToteFaultFault_FaultMessage">
-    <wsdl:part xmlns:q10="http://schema.unitedtote.com/ToteLink/Faults/2008/10" name="detail" element="q10:ToteLinkFault" />
+    <wsdl:part xmlns:q6="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q6:ValidationFault" />
   </wsdl:message>
   <wsdl:portType name="Wagering">
     <wsdl:operation name="Keepalive">
@@ -75,51 +63,47 @@
     <wsdl:operation name="IssueTicket">
       <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/IssueTicket" message="tns:Wagering_IssueTicket_InputMessage" />
       <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/IssueTicketResponse" message="tns:Wagering_IssueTicket_OutputMessage" />
-      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/IssueTicketToteFaultFault" name="ToteFaultFault" message="tns:Wagering_IssueTicket_ToteFaultFault_FaultMessage" />
       <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/IssueTicketValidationFaultFault" name="ValidationFaultFault" message="tns:Wagering_IssueTicket_ValidationFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="ValidateTicket">
       <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/ValidateTicket" message="tns:Wagering_ValidateTicket_InputMessage" />
       <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/ValidateTicketResponse" message="tns:Wagering_ValidateTicket_OutputMessage" />
-      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/ValidateTicketToteFaultFault" name="ToteFaultFault" message="tns:Wagering_ValidateTicket_ToteFaultFault_FaultMessage" />
       <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/ValidateTicketValidationFaultFault" name="ValidationFaultFault" message="tns:Wagering_ValidateTicket_ValidationFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="CancelTicket">
       <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/CancelTicket" message="tns:Wagering_CancelTicket_InputMessage" />
       <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/CancelTicketResponse" message="tns:Wagering_CancelTicket_OutputMessage" />
       <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/CancelTicketValidationFaultFault" name="ValidationFaultFault" message="tns:Wagering_CancelTicket_ValidationFaultFault_FaultMessage" />
-      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/CancelTicketToteFaultFault" name="ToteFaultFault" message="tns:Wagering_CancelTicket_ToteFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="InquireTicket">
       <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/InquireTicket" message="tns:Wagering_InquireTicket_InputMessage" />
       <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/InquireTicketResponse" message="tns:Wagering_InquireTicket_OutputMessage" />
       <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/InquireTicketValidationFaultFault" name="ValidationFaultFault" message="tns:Wagering_InquireTicket_ValidationFaultFault_FaultMessage" />
-      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Wager/Wagering/InquireTicketToteFaultFault" name="ToteFaultFault" message="tns:Wagering_InquireTicket_ToteFaultFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:service name="WageringService">
     <wsdl:port name="Wagering-BASIC" binding="i0:Wagering-BASIC">
-      <soap:address location="http://usdcnyctl01.utote.com:8088/ToteLink/WageringService/BASIC" />
+      <soap:address location="http://usdcpdxtl03.utote.com:8088/ToteLink/WageringService/BASIC" />
     </wsdl:port>
     <wsdl:port name="Wagering-BASIC-S" binding="i0:Wagering-BASIC-S">
-      <soap:address location="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService/BASIC" />
+      <soap:address location="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService/BASIC" />
     </wsdl:port>
     <wsdl:port name="Wagering-TCP" binding="i0:Wagering-TCP">
-      <soap12:address location="net.tcp://usdcnyctl01.utote.com:8089/ToteLink/WageringService/TCP" />
+      <soap12:address location="net.tcp://usdcpdxtl03.utote.com:8089/ToteLink/WageringService/TCP" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://usdcnyctl01.utote.com:8089/ToteLink/WageringService/TCP</wsa10:Address>
+        <wsa10:Address>net.tcp://usdcpdxtl03.utote.com:8089/ToteLink/WageringService/TCP</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="Wagering-WS" binding="i0:Wagering-WS">
-      <soap12:address location="http://usdcnyctl01.utote.com:8088/ToteLink/WageringService/WS" />
+      <soap12:address location="http://usdcpdxtl03.utote.com:8088/ToteLink/WageringService/WS" />
       <wsa10:EndpointReference>
-        <wsa10:Address>http://usdcnyctl01.utote.com:8088/ToteLink/WageringService/WS</wsa10:Address>
+        <wsa10:Address>http://usdcpdxtl03.utote.com:8088/ToteLink/WageringService/WS</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
     <wsdl:port name="Wagering-WS-S" binding="i0:Wagering-WS-S">
-      <soap12:address location="https://usdcnyctl01.utote.com:8090/ToteLink/WageringService/WS" />
+      <soap12:address location="https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService/WS" />
       <wsa10:EndpointReference>
-        <wsa10:Address>https://usdcnyctl01.utote.com:8090/ToteLink/WageringService/WS</wsa10:Address>
+        <wsa10:Address>https://usdcpdxtl03.utote.com:8090/ToteLink/WageringService/WS</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

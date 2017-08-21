@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/Transaction" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TransactionService" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Transaction" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Imports">
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd1" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Transaction" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd4" namespace="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd6" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Configuration" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd7" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common/Wager" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd8" namespace="http://schema.unitedtote.com/ToteLink/ToteDataTypes/2008/04" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Transaction_Keepalive_InputMessage">
+    <wsdl:part xmlns:q1="http://schema.unitedtote.com/ToteLink/2008/06/Common" name="parameters" element="q1:Keepalive" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_Keepalive_OutputMessage">
+    <wsdl:part xmlns:q2="http://schema.unitedtote.com/ToteLink/2008/06/Common" name="parameters" element="q2:KeepaliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccountTransaction" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccountTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountTransaction_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q3:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountLogOn_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccountLogOn" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountLogOn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccountLogOnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountLogOn_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q4:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountLogOff_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccountLogOff" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountLogOff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccountLogOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountLogOff_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q5:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccountStatus" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccountStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountStatus_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q6:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccountSummary" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccountSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountSummary_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q7:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccountReview" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccountReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountReview_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q8:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountInquiry_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccountInquiry" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountInquiry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccountInquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_AccountInquiry_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q9:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_Alert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Alert" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_Alert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_Alert_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q10:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_BillTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:BillTransaction" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_BillTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BillTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_BillTransaction_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q11:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_GetBAMInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBAMInfo" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_GetBAMInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBAMInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_GetBAMInfo_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q12:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_CreateW2G_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateW2G" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_CreateW2G_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateW2GResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_CreateW2G_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q13:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_PayAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PayAccount" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_PayAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PayAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="Transaction_PayAccount_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q14:ValidationFault" />
+  </wsdl:message>
+  <wsdl:portType name="Transaction">
+    <wsdl:operation name="Keepalive">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Common/Keepalive/Keepalive" message="tns:Transaction_Keepalive_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Common/Keepalive/KeepaliveResponse" message="tns:Transaction_Keepalive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountTransaction">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountTransaction" message="tns:Transaction_AccountTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountTransactionResponse" message="tns:Transaction_AccountTransaction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountTransactionValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_AccountTransaction_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountLogOn">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountLogOn" message="tns:Transaction_AccountLogOn_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountLogOnResponse" message="tns:Transaction_AccountLogOn_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountLogOnValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_AccountLogOn_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountLogOff">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountLogOff" message="tns:Transaction_AccountLogOff_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountLogOffResponse" message="tns:Transaction_AccountLogOff_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountLogOffValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_AccountLogOff_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountStatus">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountStatus" message="tns:Transaction_AccountStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountStatusResponse" message="tns:Transaction_AccountStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountStatusValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_AccountStatus_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountSummary">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountSummary" message="tns:Transaction_AccountSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountSummaryResponse" message="tns:Transaction_AccountSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountSummaryValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_AccountSummary_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountReview">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountReview" message="tns:Transaction_AccountReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountReviewResponse" message="tns:Transaction_AccountReview_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountReviewValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_AccountReview_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountInquiry">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountInquiry" message="tns:Transaction_AccountInquiry_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountInquiryResponse" message="tns:Transaction_AccountInquiry_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AccountInquiryValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_AccountInquiry_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Alert">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/Alert" message="tns:Transaction_Alert_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AlertResponse" message="tns:Transaction_Alert_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/AlertValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_Alert_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BillTransaction">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/BillTransaction" message="tns:Transaction_BillTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/BillTransactionResponse" message="tns:Transaction_BillTransaction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/BillTransactionValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_BillTransaction_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBAMInfo">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/GetBAMInfo" message="tns:Transaction_GetBAMInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/GetBAMInfoResponse" message="tns:Transaction_GetBAMInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/GetBAMInfoValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_GetBAMInfo_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateW2G">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/CreateW2G" message="tns:Transaction_CreateW2G_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/CreateW2GResponse" message="tns:Transaction_CreateW2G_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/CreateW2GValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_CreateW2G_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PayAccount">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/PayAccount" message="tns:Transaction_PayAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/PayAccountResponse" message="tns:Transaction_PayAccount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Transaction/Transaction/PayAccountValidationFaultFault" name="ValidationFaultFault" message="tns:Transaction_PayAccount_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="TransactionService">
+    <wsdl:port name="Transaction-BASIC" binding="i0:Transaction-BASIC">
+      <soap:address location="http://usdcpdxtl03.utote.com:8088/ToteLink/TransactionService/BASIC" />
+    </wsdl:port>
+    <wsdl:port name="Transaction-BASIC-S" binding="i0:Transaction-BASIC-S">
+      <soap:address location="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService/BASIC" />
+    </wsdl:port>
+    <wsdl:port name="Transaction-TCP" binding="i0:Transaction-TCP">
+      <soap12:address location="net.tcp://usdcpdxtl03.utote.com:8089/ToteLink/TransactionService/TCP" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://usdcpdxtl03.utote.com:8089/ToteLink/TransactionService/TCP</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="Transaction-WS" binding="i0:Transaction-WS">
+      <soap12:address location="http://usdcpdxtl03.utote.com:8088/ToteLink/TransactionService/WS" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://usdcpdxtl03.utote.com:8088/ToteLink/TransactionService/WS</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="Transaction-WS-S" binding="i0:Transaction-WS-S">
+      <soap12:address location="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService/WS" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService/WS</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

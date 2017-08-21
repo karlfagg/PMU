@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/Configuration" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ConfigurationService" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Configuration" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="https://usdcpdxtl03.utote.com:8090/ToteLink/ConfigurationService?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Configuration/Imports">
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/ConfigurationService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/ConfigurationService?xsd=xsd1" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Configuration" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/ConfigurationService?xsd=xsd4" namespace="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/ConfigurationService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/ConfigurationService?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/ConfigurationService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Configuration_Keepalive_InputMessage">
+    <wsdl:part xmlns:q1="http://schema.unitedtote.com/ToteLink/2008/06/Common" name="parameters" element="q1:Keepalive" />
+  </wsdl:message>
+  <wsdl:message name="Configuration_Keepalive_OutputMessage">
+    <wsdl:part xmlns:q2="http://schema.unitedtote.com/ToteLink/2008/06/Common" name="parameters" element="q2:KeepaliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="Configuration_GetConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="Configuration_GetConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Configuration_GetConfiguration_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation" name="detail" element="q3:ValidationFault" />
+  </wsdl:message>
+  <wsdl:portType name="Configuration">
+    <wsdl:operation name="Keepalive">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Common/Keepalive/Keepalive" message="tns:Configuration_Keepalive_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Common/Keepalive/KeepaliveResponse" message="tns:Configuration_Keepalive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfiguration">
+      <wsdl:input wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Configuration/Configuration/GetConfiguration" message="tns:Configuration_GetConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Configuration/Configuration/GetConfigurationResponse" message="tns:Configuration_GetConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schema.unitedtote.com/ToteLink/2008/06/Configuration/Configuration/GetConfigurationValidationFaultFault" name="ValidationFaultFault" message="tns:Configuration_GetConfiguration_ValidationFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="ConfigurationService">
+    <wsdl:port name="Configuration-BASIC" binding="i0:Configuration-BASIC">
+      <soap:address location="http://usdcpdxtl03.utote.com:8088/ToteLink/ConfigurationService/BASIC" />
+    </wsdl:port>
+    <wsdl:port name="Configuration-BASIC-S" binding="i0:Configuration-BASIC-S">
+      <soap:address location="https://usdcpdxtl03.utote.com:8090/ToteLink/ConfigurationService/BASIC" />
+    </wsdl:port>
+    <wsdl:port name="Configuration-TCP" binding="i0:Configuration-TCP">
+      <soap12:address location="net.tcp://usdcpdxtl03.utote.com:8089/ToteLink/ConfigurationService/TCP" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://usdcpdxtl03.utote.com:8089/ToteLink/ConfigurationService/TCP</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="Configuration-WS" binding="i0:Configuration-WS">
+      <soap12:address location="http://usdcpdxtl03.utote.com:8088/ToteLink/ConfigurationService/WS" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://usdcpdxtl03.utote.com:8088/ToteLink/ConfigurationService/WS</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="Configuration-WS-S" binding="i0:Configuration-WS-S">
+      <soap12:address location="https://usdcpdxtl03.utote.com:8090/ToteLink/ConfigurationService/WS" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://usdcpdxtl03.utote.com:8090/ToteLink/ConfigurationService/WS</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

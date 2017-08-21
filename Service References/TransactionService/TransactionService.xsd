@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/Configuration" elementFormDefault="qualified" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Configuration" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/TransactionService?xsd=xsd1" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Transaction" />
+  <xs:complexType name="Exchanges">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schema.unitedtote.com/ToteLink/2008/06/Transaction" minOccurs="0" maxOccurs="unbounded" name="Exchange" nillable="true" type="q1:Exchange" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Exchanges" nillable="true" type="tns:Exchanges" />
+  <xs:complexType name="BillMoves">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schema.unitedtote.com/ToteLink/2008/06/Transaction" minOccurs="0" maxOccurs="unbounded" name="BillMove" nillable="true" type="q2:BillMove" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BillMoves" nillable="true" type="tns:BillMoves" />
+  <xs:complexType name="Bills">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schema.unitedtote.com/ToteLink/2008/06/Transaction" minOccurs="0" maxOccurs="unbounded" name="Bill" nillable="true" type="q3:Bill" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bills" nillable="true" type="tns:Bills" />
+  <xs:complexType name="Recyclers">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schema.unitedtote.com/ToteLink/2008/06/Transaction" minOccurs="0" maxOccurs="unbounded" name="Recycler" nillable="true" type="q4:Recycler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Recyclers" nillable="true" type="tns:Recyclers" />
+</xs:schema>

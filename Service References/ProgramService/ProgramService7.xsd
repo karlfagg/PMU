@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schema.unitedtote.com/ToteLink/2008/06/Program" elementFormDefault="qualified" targetNamespace="http://schema.unitedtote.com/ToteLink/2008/06/Program" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
-  <xs:import schemaLocation="https://usdcnyctl01.utote.com:8090/ToteLink/ProgramService?xsd=xsd3" namespace="http://schema.unitedtote.com/ToteLink/ToteDataTypes/2008/04" />
+  <xs:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/ProgramService?xsd=xsd0" namespace="http://schema.unitedtote.com/ToteLink/2008/06/Common" />
+  <xs:import schemaLocation="https://usdcpdxtl03.utote.com:8090/ToteLink/ProgramService?xsd=xsd4" namespace="http://schema.unitedtote.com/ToteLink/ToteDataTypes/2008/04" />
   <xs:element name="GetEvents">
     <xs:complexType>
       <xs:sequence>
@@ -64,7 +64,13 @@
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
-          <xs:element name="Events" nillable="true" type="tns:Events" />
+          <xs:element minOccurs="0" name="Events" nillable="true" type="tns:Events">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -192,6 +198,20 @@
         </xs:annotation>
       </xs:element>
       <xs:element xmlns:q3="http://schema.unitedtote.com/ToteLink/ToteDataTypes/2008/04" minOccurs="0" name="RaceList" nillable="true" type="q3:CompressedList">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BreakTo" nillable="true" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EventNumber" nillable="true" type="xs:string">
         <xs:annotation>
           <xs:appinfo>
             <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
@@ -559,6 +579,20 @@
         </xs:annotation>
       </xs:element>
       <xs:element minOccurs="0" name="Exchange" nillable="true" type="tns:ExchangeWagers">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Fractional" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Addin" nillable="true" type="xs:decimal">
         <xs:annotation>
           <xs:appinfo>
             <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
@@ -946,7 +980,13 @@
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
-          <xs:element name="EventDetail" nillable="true" type="tns:Event" />
+          <xs:element minOccurs="0" name="EventDetail" nillable="true" type="tns:Event">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1016,8 +1056,20 @@
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q9="http://schema.unitedtote.com/ToteLink/2008/06/Common" base="q9:ToteLinkResponse">
         <xs:sequence>
-          <xs:element name="EventId" nillable="true" type="xs:string" />
-          <xs:element name="Race" nillable="true" type="tns:Race" />
+          <xs:element minOccurs="0" name="EventId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Race" nillable="true" type="tns:Race">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

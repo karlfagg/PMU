@@ -85,12 +85,27 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ConfigurationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\PoolInfoService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\ProgramService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ResultService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TransactionService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -115,15 +130,170 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Service References\ProgramService\ProgramService.wsdl" />
-    <None Include="Service References\ProgramService\ProgramService.xsd" />
-    <None Include="Service References\ProgramService\ProgramService1.wsdl" />
-    <None Include="Service References\ProgramService\ProgramService1.xsd" />
-    <None Include="Service References\ProgramService\ProgramService2.xsd" />
-    <None Include="Service References\ProgramService\ProgramService3.xsd" />
-    <None Include="Service References\ProgramService\ProgramService4.xsd" />
-    <None Include="Service References\ProgramService\ProgramService5.xsd" />
-    <None Include="Service References\ProgramService\ProgramService6.xsd" />
+    <None Include="Service References\ConfigurationService\ConfigurationService.wsdl" />
+    <None Include="Service References\ConfigurationService\ConfigurationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationService\ConfigurationService1.wsdl" />
+    <None Include="Service References\ConfigurationService\ConfigurationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationService\ConfigurationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationService\ConfigurationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationService\ConfigurationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationService\ConfigurationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationService\USRaceList.ConfigurationService.ConfigurationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ConfigurationService\USRaceList.ConfigurationService.KeepaliveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResultService\ResultService.wsdl" />
+    <None Include="Service References\ResultService\ResultService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResultService\ResultService1.wsdl" />
+    <None Include="Service References\ResultService\ResultService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResultService\ResultService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResultService\ResultService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResultService\ResultService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResultService\ResultService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ResultService\USRaceList.ResultService.KeepaliveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ResultService\USRaceList.ResultService.ResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\TransactionService.wsdl" />
+    <None Include="Service References\TransactionService\TransactionService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionService\TransactionService1.wsdl" />
+    <None Include="Service References\TransactionService\TransactionService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionService\TransactionService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionService\TransactionService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionService\TransactionService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionService\TransactionService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionService\TransactionService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionService\TransactionService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionService\TransactionService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.AccountPayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.BAMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.BillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.InquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.KeepaliveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.LogoffResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.LogonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.ReviewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.StatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.SummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.ToteAlertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.TransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TransactionService\USRaceList.TransactionService.W2GResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WageringService\USRaceList.WageringService.CancelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WageringService\USRaceList.WageringService.InquireResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WageringService\USRaceList.WageringService.KeepaliveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WageringService\USRaceList.WageringService.TicketRequest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WageringService\USRaceList.WageringService.TicketResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WageringService\USRaceList.WageringService.ValidateTicketResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WageringService\WageringService.wsdl" />
+    <None Include="Service References\WageringService\WageringService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WageringService\WageringService1.wsdl" />
+    <None Include="Service References\WageringService\WageringService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WageringService\WageringService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WageringService\WageringService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WageringService\WageringService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WageringService\WageringService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WageringService\WageringService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WageringService\WageringService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -158,41 +328,66 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ConfigurationService\" />
     <WCFMetadataStorage Include="Service References\PoolInfoService\" />
     <WCFMetadataStorage Include="Service References\ProgramService\" />
+    <WCFMetadataStorage Include="Service References\ResultService\" />
+    <WCFMetadataStorage Include="Service References\TransactionService\" />
     <WCFMetadataStorage Include="Service References\WageringService\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\PoolInfoService\PoolInfoService2.wsdl" />
+    <None Include="Service References\PoolInfoService\PoolInfoService21.wsdl" />
+    <None Include="Service References\PoolInfoService\PoolInfoService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PoolInfoService\PoolInfoService61.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PoolInfoService\PoolInfoService62.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PoolInfoService\PoolInfoService63.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PoolInfoService\PoolInfoService64.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PoolInfoService\PoolInfoService65.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ProgramService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\ProgramService\ProgramService2.wsdl" />
+    <None Include="Service References\ProgramService\ProgramService21.wsdl" />
+    <None Include="Service References\ProgramService\ProgramService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProgramService\ProgramService71.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProgramService\ProgramService72.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProgramService\ProgramService73.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProgramService\ProgramService74.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProgramService\ProgramService75.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProgramService\ProgramService76.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ProgramService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\WageringService\WageringService.wsdl" />
-    <None Include="Service References\WageringService\WageringService.xsd" />
-    <None Include="Service References\WageringService\WageringService1.wsdl" />
-    <None Include="Service References\WageringService\WageringService1.xsd" />
-    <None Include="Service References\WageringService\WageringService2.xsd" />
-    <None Include="Service References\WageringService\WageringService3.xsd" />
-    <None Include="Service References\WageringService\WageringService4.xsd" />
-    <None Include="Service References\WageringService\WageringService5.xsd" />
-    <None Include="Service References\WageringService\WageringService6.xsd" />
-    <None Include="Service References\WageringService\WageringService7.xsd" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\WageringService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\PoolInfoService\PoolInfoService.wsdl" />
-    <None Include="Service References\PoolInfoService\PoolInfoService.xsd" />
-    <None Include="Service References\PoolInfoService\PoolInfoService1.wsdl" />
-    <None Include="Service References\PoolInfoService\PoolInfoService1.xsd" />
-    <None Include="Service References\PoolInfoService\PoolInfoService2.xsd" />
-    <None Include="Service References\PoolInfoService\PoolInfoService3.xsd" />
-    <None Include="Service References\PoolInfoService\PoolInfoService4.xsd" />
-    <None Include="Service References\PoolInfoService\PoolInfoService5.xsd" />
     <None Include="Service References\ProgramService\USRaceList.ProgramService.EventDetailResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -200,22 +395,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ProgramService\USRaceList.ProgramService.RaceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WageringService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\WageringService\USRaceList.WageringService.CancelResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WageringService\USRaceList.WageringService.InquireResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WageringService\USRaceList.WageringService.TicketRequest.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WageringService\USRaceList.WageringService.TicketResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
@@ -235,6 +414,60 @@
     </None>
     <None Include="Service References\PoolInfoService\USRaceList.PoolInfoService.WillpaysResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProgramService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PoolInfoService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResultService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResultService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ResultService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TransactionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConfigurationService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConfigurationService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConfigurationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WageringService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WageringService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WageringService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
