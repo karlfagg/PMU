@@ -5,7 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 
 /// <summary>
-/// Summary description for DBSql  ..test
+/// Summary description for DBSql
 /// </summary>
 public class DBSql
 {
